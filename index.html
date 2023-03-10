@@ -9,11 +9,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Is it raining where I live ?</h2>
+  <h1>MyWeatherApp &#174;</h2>
   <form id="weatherForm">
-    <label for="city">Enter your city :</label>
+    <label for="city" id="cityLabel">Enter your city :</label>
     <input type="text" id="city" name="city">
-    <button type="submit">Go !</button>
+    <button type="submit" id="submit">Go !</button>
   </form>
+  <div id="mainDiv">
+    <p id="city">London</p>
+    <p>broken clouds</p>
+    <p>Temperature : 8°C</p>
+    <p>Clouds : 75%</p>
+    <p>Wind : 9 km/h</p>
+  </div>
+  <p id="answerP"></p>
 </body>
 </html>

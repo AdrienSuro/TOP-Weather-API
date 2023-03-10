@@ -1,3 +1,32 @@
 body {
-  background: yellow;
+  background-image: url(img/cloud-weather-2.jpg);
+  display: grid;
+  grid-auto-flow:row;
+  justify-content: center;
+  align-content: center;
+}
+
+p, h1, #cityLabel {
+  color: white;
+}
+
+#mainDiv {
+  width: 200px;
+  height: 300px;
+  border: 5px white solid;
+  border-radius: 10px;
+  margin: auto;
+}
+
+#weatherForm {
+  justify-self: center;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 200px;
+  margin: 5px;
+}
+#submit {
+  margin: 5px;
+  width: 50px;
+  align-self: center;
 }
