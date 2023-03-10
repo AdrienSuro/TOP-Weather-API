@@ -21,6 +21,42 @@ p, h1, #cityLabel {
   gap: 3px;
 }
 
+#cityDiv {
+  width: 200px;
+  grid-row: 1/2;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+#locationlogodiv {
+  width: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 15px;
+}
+
+#locationtext {
+  font-size: 0.8em;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+#tempandsky {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+#tempandsky > * {
+  font-size: 2.5em;
+  margin: 15px;
+  width: 30%;
+}
+
 #weatherForm {
   justify-self: center;
   display: flex;
