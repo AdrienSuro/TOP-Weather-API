@@ -16,6 +16,9 @@ p, h1, #cityLabel {
   border: 5px white solid;
   border-radius: 10px;
   margin: auto;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr 1fr 2fr 2fr;
+  gap: 3px;
 }
 
 #weatherForm {
@@ -25,8 +28,14 @@ p, h1, #cityLabel {
   width: 200px;
   margin: 5px;
 }
+
 #submit {
   margin: 5px;
   width: 50px;
   align-self: center;
+}
+
+.logo {
+  fill: white;
+  width: 20px;
 }
