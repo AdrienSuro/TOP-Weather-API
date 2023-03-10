@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Is it raining where I live ?</h2>
-  <form>
+  <form id="weatherForm">
     <label for="city">Enter your city :</label>
     <input type="text" id="city" name="city">
-    <input type="button" value="Click" onclick="catchWeather(this.form.city.value)">
+    <button type="submit">Go !</button>
   </form>
 </body>
 </html>
