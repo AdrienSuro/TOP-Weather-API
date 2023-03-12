@@ -57,6 +57,10 @@ body {
   align-content: center;
 }
 
+.clearskynight {
+  background-image: url(img/clearskynight.jpg)
+}
+
 h3, #smallinfo {
   font-size: 0.9rem;
 }

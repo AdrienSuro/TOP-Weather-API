@@ -2,6 +2,14 @@
 
 const weatherForm = document.getElementById("weatherForm")
 const answerP = document.getElementById("answerP")
+const locationtext = document.getElementById("locationtext")
+const tempdiv = document.getElementById("tempdiv")
+const clouds = document.querySelector(".clouds")
+const humidity = document.querySelector(".humidity")
+const pressure = document.querySelector(".pressure")
+const wind = document.querySelector(".wind")
+const body = document.querySelector("body")
+
 
 function catchWeather(city) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=683ab985d7494deabd4ff0c0fd9208cf&units=metric`)
@@ -9,14 +17,7 @@ function catchWeather(city) {
       return res.json()
     })
     .then((res) => {
-      if (res.main.feels_like >= 10) {
-        console.log(res)
-        answerP.innerHTML = `It's nice to live in ${city}`
-      }
-      else if (res.main.feels_like < 10) {
-        console.log(res)
-        answerP.innerHTML = `freezin my ass in ${city}`
-      }
+      displayWeatherInfo(res);
     })
     .catch((err) => {answerP.innerHTML = "sorry but this city doesn't exist and we don't have weather stations yet on Jupiter"})
 }
@@ -29,5 +30,18 @@ weatherForm.addEventListener("submit", (event) => {
 })
 
 function displayWeatherInfo(info) {
-  
+  console.log(info)
+  if (info.weather[0].id >= 200 && info.weather[0].id < 300) {
+    console.log("thunderstorm")
+  }
+  else if (info.weather[0].id === 800) {
+    console.log("clear sky")
+    body.classList.add("clearskynight")
+  }
+  locationtext.innerHTML = info.name ; 
+  tempdiv.innerHTML = Math.round(info.main.temp) + " °C" ;
+  clouds.innerHTML = info.clouds.all + " %" ;
+  humidity.innerHTML = info.main.humidity + " %" ;
+  pressure.innerHTML = info.main.pressure + " hPa" ; 
+  wind.innerHTML = Math.round(info.wind.speed) + " km/h" ;
 }
