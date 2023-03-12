@@ -61,6 +61,10 @@ body {
   background-image: url(img/clearskynight.jpg)
 }
 
+.thunderstorm {
+  background-image: url(img/thunderstorm.jpg);
+}
+
 h3, #smallinfo {
   font-size: 0.9rem;
 }

@@ -9,6 +9,7 @@ const humidity = document.querySelector(".humidity")
 const pressure = document.querySelector(".pressure")
 const wind = document.querySelector(".wind")
 const body = document.querySelector("body")
+const skyimg = document.querySelector("#skyimg")
 
 
 function catchWeather(city) {
@@ -33,9 +34,12 @@ function displayWeatherInfo(info) {
   console.log(info)
   if (info.weather[0].id >= 200 && info.weather[0].id < 300) {
     console.log("thunderstorm")
+    skyimg.setAttribute("src", "https://openweathermap.org/img/wn/11d@2x.png")
+    body.classList.add("thunderstorm")
   }
   else if (info.weather[0].id === 800) {
     console.log("clear sky")
+    skyimg.setAttribute("src", "https://openweathermap.org/img/wn/01n@2x.png")
     body.classList.add("clearskynight")
   }
   locationtext.innerHTML = info.name ; 
