@@ -27,3 +27,7 @@ weatherForm.addEventListener("submit", (event) => {
   userCity.value = ""
   event.preventDefault();
 })
+
+function displayWeatherInfo(info) {
+  
+}
