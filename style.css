@@ -65,6 +65,30 @@ body {
   background-image: url(img/thunderstorm.jpg);
 }
 
+.drizzle {
+  background-image: url(img/drizzle.jpg);
+}
+
+.rain {
+  background-image: url(img/rain.jpg);
+}
+
+.snow {
+  background-image: url(img/snow.jpg);
+}
+
+.fog {
+  background-image: url(img/fog.jpg);
+}
+
+.fewclouds {
+  background-image: url(img/fewclouds.jpg);
+}
+
+.heavyclouds {
+  background-image: url(img/heavyclouds.jpg);
+}
+
 h3, #smallinfo {
   font-size: 0.9rem;
 }
@@ -80,7 +104,7 @@ p, h1, #cityLabel, #smallinfo, h3 {
   border-radius: 10px;
   margin: auto;
   display: grid;
-  grid-template-rows: 1fr 6fr 4fr 4fr;
+  grid-template-rows: 1fr 6fr 1fr 4fr 4fr;
   justify-content: center;
   gap: 3px;
   background-color: rgba(0, 0, 0, 0.4)
@@ -124,6 +148,12 @@ p, h1, #cityLabel, #smallinfo, h3 {
 #tempandsky > * {
   font-size: 2.5em;
   margin-top: 12px;
+}
+
+#description {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
 }
 
 #firstbox, #secondbox {
